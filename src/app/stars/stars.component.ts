@@ -15,7 +15,13 @@ export class StarsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.stars = [true,true,true,true,true,];
+    //this.stars = [true,true,true,true,true,];
+    this.stars = [];
+    for(let i =1;i<5;i++){
+      //根据传入的值进行
+      this.stars.push(i>this.rating);
+      
+    };
   }
 
 }
