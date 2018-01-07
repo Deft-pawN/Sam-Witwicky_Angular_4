@@ -13,10 +13,11 @@ import { SearchComponent } from './search/search.component';
 import { ChatComponent } from './chat/chat.component';
 import { ProductDeatilComponent } from './product-deatil/product-deatil.component';
 import { HomeComponent } from './home/home.component';
+import { ProductService } from './share/product.service';
 //自动生成
 const routeConfig:Routes = [
   {path:"",component:HomeComponent},
-  {path:"product/:productTitle",component:ProductDeatilComponent}
+  {path:"product/:ProductId",component:ProductDeatilComponent}
   ]
 
 @NgModule({
@@ -37,7 +38,7 @@ const routeConfig:Routes = [
     RouterModule.forRoot(routeConfig)
     //使用forRoot 进行主模块进行注入设置
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
