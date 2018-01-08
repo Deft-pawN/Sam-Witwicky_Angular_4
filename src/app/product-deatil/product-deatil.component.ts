@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Routes, RouterModule,ActivatedRoute } from '@angular/router';
-import { ProductService } from './share/product.service';
+import { ProductService,Product } from '../share/product.service';
+
 @Component({
   selector: 'app-product-deatil',
   templateUrl: './product-deatil.component.html',
