@@ -20,7 +20,7 @@ export class ProductService {
       new Comment(5,5,"2017-02-02","Sam",2,"东西还行"),
       new Comment(5,5,"2017-02-02","Sam",2,"东西还行"),
       new Comment(5,6,"2017-02-02","Sam",2,"东西还行"),
-      new Comment(5,6,"2017-02-02","Sam",2,"东西还行"),
+      new Comment(5,6,"2017-02-02","Sam",2,"东西还行")
       ];
   constructor() { }
   
@@ -37,9 +37,9 @@ export class ProductService {
       return this.products.find((product) => product.id == id);
   }
   //forth function to get comment from id
-  getCommentsForProductId(id:number):comment[]{
+  getCommentsForProductId(id:number):Comment[]{
       //lambda ,return the comment of productid 
-      return this.comments.filter((comment:comment) => comment.product_id==id);
+      return this.comments.filter((comment:Comment) => comment.productId==id);
   }
 }
 
@@ -53,7 +53,7 @@ export class Product{
     public categories:Array<string>
     
     ){}
-}
+};
 
 export class Comment {
     constructor(
@@ -63,7 +63,5 @@ export class Comment {
         public user:string,
         public rating:number,
         public content: string 
-        ){
-            
-    }
+        ){}
 }
