@@ -17,10 +17,10 @@ export class ProductService {
       new Comment(3,2,"2017-02-02","Deft",2,"东西ok"),
       new Comment(4,3,"2017-02-02","pawN",2,"东西还行"),
       new Comment(5,4,"2017-02-02","Sam",2,"东西还行"),
-      new Comment(5,5,"2017-02-02","Sam",2,"东西还行"),
-      new Comment(5,5,"2017-02-02","Sam",2,"东西还行"),
-      new Comment(5,6,"2017-02-02","Sam",2,"东西还行"),
-      new Comment(5,6,"2017-02-02","Sam",2,"东西还行")
+      new Comment(5,5,"2017-02-02","Sam",2,"东西不可以的，超级差的"),
+      new Comment(5,5,"2017-02-02","Sam",2,"挺好的，下次再来把"),
+      new Comment(5,5,"2017-02-02","Sam",2,"东西挺好的，下次还会来的"),
+      new Comment(5,6,"2017-02-02","Sam",2,"东西没有想象中的那么好")
       ];
   constructor() { }
   
