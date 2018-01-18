@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+import { LoggerService } from './logger.service';
 
 @Injectable()
 export class ProductService {
-
-  constructor() { }
+  constructor(private logger:LoggerService) { }
   getproduct(): Product{
-      return new Product(0,"Iphon10",89898,"最新的IPhone手机,就是牛叉！！")
+      this.logger.log('logger 方法 被调用！');
+      return new Product(0,"Iphon10",89898,"最新的IPhone手机,就是牛叉！！");
   }
 
 };
