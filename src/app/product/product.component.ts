@@ -10,7 +10,7 @@ export class ProductComponent implements OnInit {
   
   private products:Array<Product>;
   constructor(private prodct:ProductService) {}
-
+  private keyword:String;
   ngOnInit() {
     this.products=this.prodct.getProducts();//get all the product Info
   }

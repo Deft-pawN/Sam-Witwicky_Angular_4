@@ -31,7 +31,8 @@ const routeConfig:Routes = [
     SearchComponent,
     ChatComponent,
     ProductDeatilComponent,
-    HomeComponent
+    HomeComponent,
+    ReactiveFormModule,
   ],
   imports: [
     BrowserModule,
