@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -14,6 +12,8 @@ import { ChatComponent } from './chat/chat.component';
 import { ProductDeatilComponent } from './product-deatil/product-deatil.component';
 import { HomeComponent } from './home/home.component';
 import { ProductService } from './share/product.service';
+import { FilterPipe } from './pipes/filter.pipe';
+import {FormBuilder, FormGroup, FormControl,ReactiveFormsModule} from '@angular/forms'
 //自动生成
 const routeConfig:Routes = [
   {path:"",component:HomeComponent},
@@ -32,11 +32,11 @@ const routeConfig:Routes = [
     ChatComponent,
     ProductDeatilComponent,
     HomeComponent,
-    ReactiveFormModule,
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routeConfig)
+    ReactiveFormsModule,
+    RouterModule.forRoot(routeConfig),
     //使用forRoot 进行主模块进行注入设置
   ],
   providers: [ProductService],
