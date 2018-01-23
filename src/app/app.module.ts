@@ -32,6 +32,7 @@ const routeConfig:Routes = [
     ChatComponent,
     ProductDeatilComponent,
     HomeComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
