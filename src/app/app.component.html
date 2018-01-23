@@ -4,6 +4,15 @@
      <h1>基本样式注入 </h1>
   </div>
   <div>
+      <input type="text" placeholder="请输入股票信息" [(ngModel)]="stock">
+      <app-order [stockCode]="stock" [amount]="100"></app-order>
+  </div>
+  <div>
+     
+      <app-price-quote></app-price-quote>
+  </div>
+  
+  <div>
    <app-product1></app-product1>
    <app-product2></app-product2>
    <app-bind></app-bind>

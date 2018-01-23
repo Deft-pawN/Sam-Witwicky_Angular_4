@@ -10,16 +10,22 @@ import { LoggerService } from './shared/logger.service';
 import { AnotherServiceService } from './shared/another-service.service';
 import { BindComponent } from './bind/bind.component';
 import { MultiplePipe } from './pipe/multiple.pipe';
+import { OrderComponent } from './order/order.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PriceQuoteComponent } from './price-quote/price-quote.component';
 @NgModule({
   declarations: [
     AppComponent,
     Product1Component,
     Product2Component,
     BindComponent,
-    MultiplePipe
+    MultiplePipe,
+    OrderComponent,
+    PriceQuoteComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+     FormsModule,
   ],
   providers: [{provide:ProductService,useFactory:(logger:LoggerService,appConfig)=>{
     //创建userfactory的函数,使用的是匿名函数的方式 
