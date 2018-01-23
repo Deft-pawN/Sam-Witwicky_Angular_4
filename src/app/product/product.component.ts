@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute,Router } from '@angular/router';
 import { ProductService } from '../share/product.service';
 import { FormControl } from '@angular/forms';
-
+import { FilterPipe } from '../pipes/filter.pipe';
 
 import'rxjs/Rx' 
 @Component({
