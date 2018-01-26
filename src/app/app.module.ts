@@ -13,7 +13,8 @@ import { ProductDeatilComponent } from './product-deatil/product-deatil.componen
 import { HomeComponent } from './home/home.component';
 import { ProductService } from './share/product.service';
 import { FilterPipe } from './pipes/filter.pipe';
-import {FormBuilder, FormGroup, FormControl,ReactiveFormsModule} from '@angular/forms'
+import {FormBuilder, FormGroup, FormControl,ReactiveFormsModule} from '@angular/forms';
+import { LiveComponent } from './live/live.component'
 //自动生成
 const routeConfig:Routes = [
   {path:"",component:HomeComponent},
@@ -33,6 +34,7 @@ const routeConfig:Routes = [
     ProductDeatilComponent,
     HomeComponent,
     FilterPipe,
+    LiveComponent,
   ],
   imports: [
     BrowserModule,
