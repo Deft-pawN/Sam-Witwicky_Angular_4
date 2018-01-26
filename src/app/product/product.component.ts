@@ -10,6 +10,8 @@ import'rxjs/Rx'
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
+
+
 export class ProductComponent implements OnInit {
   
   private products:Array<Product>;
