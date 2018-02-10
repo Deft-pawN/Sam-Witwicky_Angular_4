@@ -13,8 +13,10 @@ import { ProductDeatilComponent } from './product-deatil/product-deatil.componen
 import { HomeComponent } from './home/home.component';
 import { ProductService } from './share/product.service';
 import { FilterPipe } from './pipes/filter.pipe';
-import {FormBuilder, FormGroup, FormControl,ReactiveFormsModule} from '@angular/forms';
-import { LiveComponent } from './live/live.component'
+import {FormBuilder, FormGroup, FormControl,ReactiveFormsModule,FormsModule} from '@angular/forms';
+import { LiveComponent } from './live/live.component';
+import { ChildComponent } from './child/child.component'
+
 //自动生成
 const routeConfig:Routes = [
   {path:"",component:HomeComponent},
@@ -35,11 +37,13 @@ const routeConfig:Routes = [
     HomeComponent,
     FilterPipe,
     LiveComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routeConfig),
+    FormsModule,
     //使用forRoot 进行主模块进行注入设置
   ],
   providers: [ProductService],

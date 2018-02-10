@@ -23,6 +23,19 @@
   <div class="row">
     <div class="col-md-3">
       <app-search>this is for You</app-search>
+      <app-live [name]="title"></app-live>
+      <div>
+        <div class="parent">
+          <h2>我是父组件</h2>
+          <div>
+            问候语：<input type="text" [(ngModel)]="greeting">
+          </div>
+          <div>
+            姓名：<input type="text" [(ngModel)]="user.name">
+          </div>
+          <app-child [greeting]="greeting" [user]="user"></app-child>
+        </div>
+      </div>
     </div>
     <div class="col-md-9">
       <router-outlet></router-outlet>
