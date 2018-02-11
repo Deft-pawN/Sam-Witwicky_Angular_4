@@ -20,18 +20,44 @@
 
 <app-navbar></app-navbar>
 <div class="container">
+ 
   <div class="row">
     <div class="col-md-3">
       <app-search>this is for You</app-search>
+      <app-live [name]="title"></app-live>
+      
     </div>
+    
     <div class="col-md-9">
       <router-outlet></router-outlet>
-      <!--app-carousel></app-carousel>
+      <app-carousel></app-carousel>
     <div class="row">
       <app-product></app-product>
-    </div-->
+    </div>
   </div>
   </div>
+</div>
+<div>
+   <div>
+        <div class="parent">
+          <h2>我是父组件</h2>
+          <div>
+            问候语：<input type="text" [(ngModel)]="greeting">
+          </div>
+          <div>
+            姓名：<input type="text" [(ngModel)]="user.name">
+          </div>
+          <app-child [greeting]="greeting" [user]="user"></app-child>
+        </div>
+  </div>
+  <app-child #child1>
+    <div>
+      这个div 是父组件投影到子组件上的
+    </div>
+    
+  </app-child>
+  <app-child #child2></app-child>
+  <button (click)="child2.greetings('jerry')">调用child2的greeting方法</button>
 </div>
 <app-footer></app-footer>
 
